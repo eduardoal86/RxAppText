@@ -9,4 +9,6 @@ import com.example.edualves.myrxapplicationtest.model.GithubResponse;
 public interface MainView {
 
     void showUserInfo(GithubResponse response);
+
+    void showErrorMessage(String message);
 }

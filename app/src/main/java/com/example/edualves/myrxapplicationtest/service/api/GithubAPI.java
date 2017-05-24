@@ -4,6 +4,7 @@ import com.example.edualves.myrxapplicationtest.model.GithubResponse;
 
 import io.reactivex.Observable;
 import retrofit2.Call;
+import retrofit2.Response;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
@@ -14,5 +15,5 @@ import retrofit2.http.Path;
 public interface GithubAPI {
 
     @GET("users/{username}")
-    Observable<GithubResponse> getUserInfo(@Path("username") String username);
+    Observable<Response<GithubResponse>> getUserInfo(@Path("username") String username);
 }

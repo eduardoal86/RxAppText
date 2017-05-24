@@ -8,10 +8,7 @@ import com.google.gson.GsonBuilder;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 import io.reactivex.Observable;
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
-import retrofit2.Call;
-import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -34,11 +31,11 @@ public class GithubServiceImpl implements GithubService {
             .build();
 
     @Override
-    public Observable<GithubResponse> getUserInfo(String username) {
+    public Observable<Response<GithubResponse>> getUserInfo(String username) {
 
         GithubAPI githubAPI = retrofit.create(GithubAPI.class);
 
-        Observable<GithubResponse> observable = githubAPI.getUserInfo(username);
+        Observable<Response<GithubResponse>> observable = githubAPI.getUserInfo(username);
         return observable;
     }
 }

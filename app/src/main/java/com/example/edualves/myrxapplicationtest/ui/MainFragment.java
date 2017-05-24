@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.edualves.myrxapplicationtest.model.GithubResponse;
@@ -69,6 +70,13 @@ public class MainFragment extends Fragment implements MainView{
         name.setText(user.getName());
         bioDesc.setText(user.getBio());
 
+    }
+
+    @Override
+    public void showErrorMessage(String message) {
+        Toast.makeText(getActivity(),
+                message,
+                Toast.LENGTH_LONG).show();
     }
 
 }
