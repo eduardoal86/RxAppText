@@ -30,12 +30,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/edualves/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/Users/edualves/dev/MyRxApplicationTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.1.0_48dede0f6eba3d8b882955d29a9f81a4eac55a9b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/edualves/.gradle/caches/modules-2/files-2.1/com.jakewharton.retrofit/retrofit2-rxjava2-adapter/1.0.0/e117362a2103f8ec01091ebd2f40aca4e1ada599/retrofit2-rxjava2-adapter-1.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e117362a2103f8ec01091ebd2f40aca4e1ada599">
+        <dex dex="/Users/edualves/dev/MyRxApplicationTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit2-rxjava2-adapter-1.0.0_21228e79b00923f2c8cc7ff02a43e709f73c09d9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/edualves/.android/build-cache/b49487c00f8848551d13475d9d1f84c48427e853/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="be587097e648eabfb7f9eca23ab03369894e2d5d">
         <dex dex="/Users/edualves/dev/MyRxApplicationTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7553cacaf4e2eb85f86fb2d10d074a059e18d1fe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/edualves/dev/RxAppText/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/edualves/dev/RxAppText/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_1ac9139cc49a57ecb8537e24a49159c2ba0b2716/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -48,15 +75,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/edualves/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
-        <dex dex="/Users/edualves/dev/MyRxApplicationTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.1.0_48dede0f6eba3d8b882955d29a9f81a4eac55a9b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/edualves/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
         jumboMode="true"
         optimize="true"
@@ -66,12 +84,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/edualves/.gradle/caches/modules-2/files-2.1/com.jakewharton.retrofit/retrofit2-rxjava2-adapter/1.0.0/e117362a2103f8ec01091ebd2f40aca4e1ada599/retrofit2-rxjava2-adapter-1.0.0.jar"
+        jar="/Users/edualves/dev/RxAppText/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="e117362a2103f8ec01091ebd2f40aca4e1ada599">
-        <dex dex="/Users/edualves/dev/MyRxApplicationTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit2-rxjava2-adapter-1.0.0_21228e79b00923f2c8cc7ff02a43e709f73c09d9/classes.dex" />
+        sha1="25e07c72add87d021fdcba825331337eb0dce83e">
+        <dex dex="/Users/edualves/dev/RxAppText/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_4bd3ffa48c434c0a30cecc8d9b31ddb4bea1b579/classes.dex" />
     </item>
     <item
         is-multidex="true"

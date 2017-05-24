@@ -5,6 +5,7 @@ import com.example.edualves.myrxapplicationtest.model.GithubResponse;
 import com.example.edualves.myrxapplicationtest.service.api.GithubAPI;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -28,36 +29,16 @@ public class GithubServiceImpl implements GithubService {
 
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(SERVICE_ENDPOINT)
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build();
 
     @Override
     public Observable<GithubResponse> getUserInfo(String username) {
-        
+
         GithubAPI githubAPI = retrofit.create(GithubAPI.class);
 
         Observable<GithubResponse> observable = githubAPI.getUserInfo(username);
-        observable.subscribe(new Observer<GithubResponse>() {
-            @Override
-            public void onSubscribe(Disposable d) {
-
-            }
-
-            @Override
-            public void onNext(GithubResponse value) {
-
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        });
         return observable;
     }
 }

@@ -12,9 +12,12 @@ import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 
+import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -40,7 +43,16 @@ public class MainPresenterImpl implements MainPresenter {
     @Override
     public void getUserInfo(String username) {
 
-        service.getUserInfo(username);
+        Observable<GithubResponse> observable = service.getUserInfo(username);
+
+        observable.subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<GithubResponse>() {
+            @Override
+            public void accept(GithubResponse githubResponse) throws Exception {
+                view.showUserInfo(githubResponse);
+            }
+        });
 
     }
 }
