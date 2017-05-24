@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyRxApplicationTest</string>
+    <string name="test_message">Fragment criado!</string>
+    <string name="btn_title_fetch">FETCH</string>
+    <string name="name_label">Name:</string>
+    <string name="bio_label">Bio:</string>
+</resources>
