@@ -48,26 +48,17 @@ public class MainPresenterImpl implements MainPresenter {
 
         observable.subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<Response<GithubResponse>>() {
+                .doOnError(new Consumer<Throwable>() {
                     @Override
-                    public void onSubscribe(Disposable d) {
-                        
+                    public void accept(Throwable throwable) throws Exception {
+                        Log.d(LOG_TAG, "ERROR:" + throwable.getMessage());
+                        view.showErrorMessage(throwable.getMessage());
                     }
-
+                })
+                .subscribe(new Consumer<Response<GithubResponse>>() {
                     @Override
-                    public void onNext(Response<GithubResponse> response) {
-                        view.showUserInfo(response.body());
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        Log.d(LOG_TAG, "ERROR:" + e.getMessage());
-                        view.showErrorMessage(e.getMessage());
-                    }
-
-                    @Override
-                    public void onComplete() {
-
+                    public void accept(Response<GithubResponse> githubResponseResponse) throws Exception {
+                        view.showUserInfo(githubResponseResponse.body());
                     }
                 });
 
